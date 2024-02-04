@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* width: 70vw; */
+    width: 100vw;
+    height: 80vh;
+    background-color: skyblue;
+    position: relative;
+    top: 0;
+
+}
+
+.container2 {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 20vh;
+    background-color: grey;
+    border-top: 5px solid black;
+
+
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    /* left: 0; */
+    right: 100%;
+    /* animation-name: BounceY;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: BaounceX; */
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* animation: BounceY 2s linear 0s infinite normal; */
+    animation: BounceX 5s linear 0s infinite normal forwards, BounceY 1s linear 0s infinite alternate;
+
+}
+
+.sun {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 1px solid black;
+
+    /* box-shadow: inset 0px 0px 20px 7px orange; */
+    /* box-shadow: inset 0px 0px 25px 7px orange; */
+    box-shadow: 0px 0px 100px 20px orange, inset 0px 0px 25px 7px orange;
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: rotation 2s linear 0s infinite normal forwards;
+}
+
+
+@keyframes BounceX {
+
+    100% {
+        /* transform: translatex(100vw); */
+        /* left: 100%; */
+        right: 0;
+    }
+}
+
+@keyframes BounceY {
+    100% {
+        /* transform: translateY(-300px); */
+        bottom: 50%;
+    }
+
+}
+
+@keyframes rotation {
+    50%{
+        transform: rotate(100deg);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
